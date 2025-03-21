@@ -10,9 +10,3 @@
 [submodule "src/dynamixel_interfaces"]
 	path = src/dynamixel_interfaces
 	url = https://github.com/ROBOTIS-GIT/dynamixel_interfaces.git
-[submodule "GraspNet/graspnet-baseline"]
-	path = GraspNet/graspnet-baseline
-	url = https://github.com/graspnet/graspnet-baseline.git
-[submodule "GraspNet/graspnetAPI"]
-	path = GraspNet/graspnetAPI
-	url = https://github.com/graspnet/graspnetAPI.git

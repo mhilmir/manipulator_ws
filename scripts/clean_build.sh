@@ -1,0 +1,1 @@
+rm -rf ~/manipulator_ws/build/ ~/manipulator_ws/install/ ~/manipulator_ws/log/
