@@ -4,3 +4,11 @@ OPEN MANIPULATOR
   - kalo mau jalanin controller nya open manipulator, posisi open manipulatornya harus bener (bisa dibantu pake tangan)
   - agar open manipulator langsung posisi siaga saat dihidupin, opencr harus di flash yang turtlebot3_with_open_manipulator (tapi ini ga include usb_to_dxl ya)
   - kalo ada error failed to open port, /dev/ttyACM0 nya kudu di chmod dulu
+
+ROS
+  - [Untuk Python] Kalo vscode nya gk nemu library-library ROS, dalam directory .vscode buat settings.json lalu tambahin :
+      "python.autoComplete.extraPaths": [
+          "/opt/ros/humble/local/lib/python3.10/dist-packages"  --> ini bisa berbeda di tiap mesin, cari aja pake print(rclpy.__file__)
+      ]
+
+  - [Untuk C++]
