@@ -11,4 +11,10 @@ ROS
           "/opt/ros/humble/local/lib/python3.10/dist-packages"  --> ini bisa berbeda di tiap mesin, cari aja pake print(rclpy.__file__)
       ]
 
-  - [Untuk C++]
+  - [Untuk C++] Sedangkan kalo cpp di file .vscode/c_cpp_properties.json
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/opt/ros/humble/include/**"
+      ]
+  
+  - Tapi tergantung juga extension nya apa, soalnya tiap extension bisa beda-beda
