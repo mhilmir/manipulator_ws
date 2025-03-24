@@ -17,10 +17,16 @@ ament_target_dependencies(my_test_cpp rclcpp)
 add_executable(try_control_moveit src/try_control_moveit.cpp)
 ament_target_dependencies(try_control_moveit rclcpp moveit_ros_planning_interface)
 
+add_executable(control_playground src/control_playground.cpp)
+ament_target_dependencies(control_playground rclcpp moveit_ros_planning_interface)
+
 install(TARGETS my_test_cpp
   DESTINATION lib/${PROJECT_NAME}
 )
 install(TARGETS try_control_moveit
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(TARGETS control_playground
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -39,6 +45,10 @@ endif()
 # Install Python node
 install(PROGRAMS
   scripts/my_test_py.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(PROGRAMS
+  scripts/robot_pose.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

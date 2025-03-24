@@ -27,14 +27,7 @@ int main(int argc, char * argv[])
         msg.orientation.y = 0.0;
         msg.orientation.z = 0.0;
         msg.orientation.w = 1.0;
-        // msg.position.x = 0.168;
-        // msg.position.y = 0.0;
-        // msg.position.z = 0.2;
-        // msg.orientation.x = 0.7071068;
-        // msg.orientation.y = 0.0;
-        // msg.orientation.z = 0.0;
-        // msg.orientation.w = 0.7071068;
-        msg.position.x = 0.1;
+        msg.position.x = 0.168;
         msg.position.y = 0.0;
         msg.position.z = 0.2;
         return msg;
@@ -63,13 +56,13 @@ int main(int argc, char * argv[])
     // Create the MoveIt MoveGroup Interface for the "gripper" planning group
     auto gripper_interface = MoveGroupInterface(node, "gripper");
 
-    // Set the "close" position for the gripper and move it
-    gripper_interface.setNamedTarget("close");
+    // Set the "open" position for the gripper and move it
+    gripper_interface.setNamedTarget("open");
     if (gripper_interface.move()) {
-        RCLCPP_INFO(logger, "Gripper closed successfully");  // Log success
+        RCLCPP_INFO(logger, "Gripper opened successfully");  // Log success
         std::this_thread::sleep_for(std::chrono::seconds(2));  // Wait for 2 seconds
     } else {
-        RCLCPP_ERROR(logger, "Failed to close the gripper");  // Log an error if it fails
+        RCLCPP_ERROR(logger, "Failed to open the gripper");  // Log an error if it fails
     }
 
     // Move the arm back to the "home" position
@@ -78,12 +71,12 @@ int main(int argc, char * argv[])
         RCLCPP_INFO(logger, "Arm moved back to init position");  // Log success
         std::this_thread::sleep_for(std::chrono::seconds(2));  // Wait for 2 seconds
 
-        // Open the gripper
-        gripper_interface.setNamedTarget("open");
+        // close the gripper
+        gripper_interface.setNamedTarget("close");
         if (gripper_interface.move()) {
-        RCLCPP_INFO(logger, "Gripper opened successfully");  // Log success
+        RCLCPP_INFO(logger, "Gripper closed successfully");  // Log success
         } else {
-        RCLCPP_ERROR(logger, "Failed to open the gripper");  // Log an error if it fails
+        RCLCPP_ERROR(logger, "Failed to close the gripper");  // Log an error if it fails
         }
 
     } else {
