@@ -10,3 +10,9 @@
 [submodule "src/dynamixel_interfaces"]
 	path = src/dynamixel_interfaces
 	url = https://github.com/ROBOTIS-GIT/dynamixel_interfaces.git
+[submodule "src/dynamixel-workbench"]
+	path = src/dynamixel-workbench
+	url = https://github.com/ROBOTIS-GIT/dynamixel-workbench.git
+[submodule "src/dynamixel-workbench-msgs"]
+	path = src/dynamixel-workbench-msgs
+	url = https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
