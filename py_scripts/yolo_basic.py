@@ -5,7 +5,7 @@ from ultralytics import YOLO
 yolo = YOLO('yolov8s.pt')
 
 # Load the video capture
-videoCap = cv2.VideoCapture(6)
+videoCap = cv2.VideoCapture(0)
 
 # Function to get class colors
 def getColours(cls_num):
